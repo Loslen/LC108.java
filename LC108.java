@@ -5,6 +5,8 @@ class Solution {
         return dfs(nums, 0, nums.length - 1);
     }
     private TreeNode dfs(int[] nums, int lo, int hi) {
+        //基底ケース 範囲が無効になったら終了
+        //递归终止条件：范围无效则停止
         if (lo > hi) {
             return null;
         }
