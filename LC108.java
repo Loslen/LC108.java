@@ -12,8 +12,6 @@ class Solution {
         }
         //昇順配列の中央要素をルートノードとする
         int mid = lo + (hi - lo) / 2;
-        //真ん中のインデックスを計算する（整数のオーバーフローを防ぐため）
-        //计算中间索引(使用这种写法是为了防止整数溢出)
         TreeNode root = new TreeNode(nums[mid]);
         //再帰的にルートの左部分木と右部分木を構築する
         root.left = dfs(nums, lo, mid -1);
