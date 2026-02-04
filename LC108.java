@@ -6,7 +6,7 @@ class Solution {
     }
     private TreeNode dfs(int[] nums, int lo, int hi) {
         //基底ケース 範囲が無効になったら終了
-        //递归终止条件：范围无效则停止
+        //递归终止条件：范围无效(lo>ho)时结束，返回null
         if (lo > hi) {
             return null;
         }
@@ -17,6 +17,8 @@ class Solution {
         TreeNode root = new TreeNode(nums[mid]);
         //再帰的にルートの左部分木と右部分木を構築する
         root.left = dfs(nums, lo, mid -1);
+        //再帰的に右部分木を構築する
+        //递归地构建左子树
         root.right = dfs(nums, mid + 1, hi);
         return root;
     }
