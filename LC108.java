@@ -20,5 +20,7 @@ class Solution {
         //再帰的に右部分木を構築する
         //递归地构建左子树
         root.right = dfs(nums, mid + 1, hi);
+        //再帰的に左部分木を構築する
+        //递归地构建右子树
         return root;
     }
